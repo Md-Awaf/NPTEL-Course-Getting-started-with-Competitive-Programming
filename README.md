@@ -1,1 +1,1 @@
-"# NPTEL-Course-Getting-started-with-Competitive-Programming" 
+# NPTEL-Course-Getting-started-with-Competitive-Programming
