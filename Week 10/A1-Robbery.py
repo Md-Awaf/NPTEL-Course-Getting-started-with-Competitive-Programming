@@ -1,17 +1,15 @@
-def solve(i, value):
-    if i == 0:
-        # print("i = ", i, value[i])
-        return value[0]
-    if i < 0:
-        return 0
-    # print("i = ", i, value[i])
-    return value[i] + max(solve(i-2,value), solve(i-3,value))
-
+def solve(n, value):
+    rob1, rob2 = 0, 0
+    for i in value:
+        temp = max(i + rob1, rob2)
+        rob1 = rob2
+        rob2 = temp
+    return rob2
 t = int(input())
 for _ in range(t):
     n = int(input())
     value = list(map(int,input().split()))
     # print(value)
-    print(solve(n-1, value))
+    print(solve(n, value))
 
 
